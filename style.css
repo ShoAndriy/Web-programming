@@ -1,0 +1,77 @@
+:root {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    background: #0F172B;
+    color: white;
+}
+.wrapper{
+    margin: 12px;
+    width: 1000px;
+    max-width: 100%;
+}
+.header {
+    background: #0F172B;
+    padding: 16px;
+    border-bottom: 1px solid #1D293D;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.hero{
+    padding: 80px 5%;
+    text-align: left;
+
+}
+.hero h1{
+    font-size: 3rem;
+    color: #51C4FF;
+    margin: 0 auto;
+
+}
+.hero p{
+    color: #90A1B9;
+    margin: 0 auto;
+}
+.career{
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+.career h1{
+    border-bottom: 1px solid #1D293D;
+}
+.cards-grid{
+    display: grid;
+    gap: 16px;
+}
+.card{
+    background: #1E2B42;
+    padding: 2rem;
+    border: 1px solid #314158;
+    border-radius: 20px;
+}
+.card > span{
+    padding: 0 1rem;
+    background: #F12F3F;
+    border-radius: 10px;
+}
+.card:hover{
+    border-color: #254885;
+}
