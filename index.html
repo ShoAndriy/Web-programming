@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/normalize.css">
+    <link type = "text/css" href="style/style.css" rel="stylesheet">
+    <title>Форма прийняття на роботу</title>
+</head>
+<body>
+<header>
+  <div class = "wrapper header-content">
+  <h1>Форма прийому на роботу</h1>
+  <p>ІТ Компанія "TechInnovate"</p>
+  <p>Поля позначені синьою лінією є обов'язковими для заповнення</p>
+  </div>
+</header>
+<main>
+  <section>
+    <div>
+        <h2>Персональні дані</h2>
+        <form class="form">
+            <label for="input-first name"><br>Ім'я<br></label>
+            <input type="text" name="first name" id="input-first name" placeholder="Введіть ваше ім'я" required>
+            <label for="input-last name"><br>Прізвище<br></label>
+            <input type="text" name="last name" id="input-last name" placeholder="Введіть ваше прізвище" required>
+            <label for="input-email"><br>Email<br></label>
+            <input type="email" name="email" id="input-email" placeholder="example@email.com" required>
+            <label for="input-phone number"><br>Телефон<br></label>
+            <input type="tel" name="phone number" id="input-phone number" placeholder="+380 XX XXX XX XX" required>
+        </form>
+    </div>
+  </section>
+  <section>
+    <div>
+        <h2>Професійна інформація</h2>
+        <form class="form">
+            <label for="input-wished proposal"><br>Бажана позиція<br></label>
+            <select name="wished proposal" id="input-wished proposal" required>
+                <option value="" selected>Оберіть позицію</option>
+                <option value="frontend" >Frontend Developer</option>
+                <option value="backend">Backend Developer</option>
+                <option value="fullstack">Fullstack Developer</option>
+                <option value="devops">DevOps Engineer</option>
+                <option value="qa">QA Engineer</option>
+                <option value="ui-ux">UI/UX Designer</option>
+                <option value="mobile">Mobile Developer</option>
+                <option value="data">Data Scientist</option>
+            </select>
+            <label for="input-job experience"><br>Досвід роботи (років)<br></label>
+            <input type="number" name="job experience" id="input-job experience" placeholder="0-50" required min="0" max="50">
+            <label for="input-skills"><br>Технології та навички<br></label>
+            <input type="text" name="skills" id="input-skills" placeholder="React, TypeScript, Node.js, Python..." required>
+        </form>
+    </div>
+  </section>
+  <section>
+    <div>
+        <h2>Додаткова інформація</h2>
+        <form class="form">
+            <label for="input-github profile"><br>GitHub профіль<br></label>
+            <input type="text" name="github profile" id="input-github profile" placeholder="https://github.com/username">
+            <label for="input-portfolio"><br>Портфоліо<br></label>
+            <input type="text" name="portfolio" id="input-portfolio" placeholder="https://yourportfolio.com">
+            <label for="input-CV"><br>Резюме (PDF, DOC)<br></label>
+            <input type="file" name="CV" id="input-CV" value="" required>
+            <label for="input-about me"><br>Коротко про себе<br></label>
+            <input type="text" name="about me" id="input-about me" placeholder="Розкажіть про свій досвід, мотивацію та чому ви хочете приєднатися до нашої команди... (мінімум 50 символів)" required>
+        </form>
+    </div>
+  </section>
+  <section>
+      <div>
+          <form>
+             <label>
+                 <input type="checkbox" name="privacy policy">Я даю згоду на обробку персональних даних та підтверджую, що вся надана інформація є достовірною *
+             </label>
+          </form>
+      </div>
+  </section>
+    <button type="submit">Надіслати заявку</button>
+</main>
+<footer>
+    
+</footer>
+</body>
+</html>
