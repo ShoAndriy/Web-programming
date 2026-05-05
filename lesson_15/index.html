@@ -8,80 +8,113 @@
     <title>Форма прийняття на роботу</title>
 </head>
 <body>
-<header>
-  <div class = "wrapper header-content">
-  <h1>Форма прийому на роботу</h1>
-  <p>ІТ Компанія "TechInnovate"</p>
-  <p>Поля позначені синьою лінією є обов'язковими для заповнення</p>
-  </div>
+<header class="header">
+    <div class="wrapper header_content">
+        <h1>Форма прийому на роботу</h1>
+        <p class="header_subtitle">ІТ Компанія "TechInnovate"</p>
+        <p class="header_info">Поля позначені синьою лінією є обов'язковими для заповнення</p>
+    </div>
 </header>
-<main>
-  <section>
-    <div>
-        <h2>Персональні дані</h2>
-        <form class="form">
-            <label for="input-first name"><br>Ім'я<br></label>
-            <input type="text" name="first name" id="input-first name" placeholder="Введіть ваше ім'я" required>
-            <label for="input-last name"><br>Прізвище<br></label>
-            <input type="text" name="last name" id="input-last name" placeholder="Введіть ваше прізвище" required>
-            <label for="input-email"><br>Email<br></label>
-            <input type="email" name="email" id="input-email" placeholder="example@email.com" required>
-            <label for="input-phone number"><br>Телефон<br></label>
-            <input type="tel" name="phone number" id="input-phone number" placeholder="+380 XX XXX XX XX" required>
-        </form>
+<main class="main-content">
+    <section class="section-personal">
+        <div class="container">
+            <h2 class="section-title">Персональні дані</h2>
+            <form class="form">
+                <label for="input-first name" class="form-field">
+                    <span class="label-text">Ім'я</span>
+                    <input type="text" name="first name" id="input-first name" class="form-input" placeholder="Введіть ваше ім'я" required>
+                </label>
+                <label for="input-last name" class="form-field">
+                    <span class="label-text">Прізвище</span>
+                    <input type="text" name="last name" id="input-last name" class="form-input" placeholder="Введіть ваше прізвище" required>
+                </label>
+                <label for="input-email" class="form-field">
+                    <span class="label-text">Email</span>
+                    <input type="email" name="email" id="input-email" class="form-input" placeholder="example@email.com" required>
+                </label>
+                <label for="input-phone number" class="form-field">
+                    <span class="label-text">Телефон</span>
+                    <input type="tel" name="phone number" id="input-phone number" class="form-input" placeholder="+380 XX XXX XX XX" required>
+                </label>
+            </form>
+        </div>
+    </section>
+    <section class="section-professional">
+        <div class="container">
+            <h2 class="section-title">Професійна інформація</h2>
+            <form class="form">
+                <label for="input-wished proposal" class="form-field">
+                    <span class="label-text">Бажана позиція</span>
+                    <select name="wished proposal" id="input-wished proposal" class="form-select" required>
+                        <option value="" selected>Оберіть позицію</option>
+                        <option value="frontend" >Frontend Developer</option>
+                        <option value="backend">Backend Developer</option>
+                        <option value="fullstack">Fullstack Developer</option>
+                        <option value="devops">DevOps Engineer</option>
+                        <option value="qa">QA Engineer</option>
+                        <option value="ui-ux">UI/UX Designer</option>
+                        <option value="mobile">Mobile Developer</option>
+                        <option value="data">Data Scientist</option>
+                    </select>
+                </label>
+
+                <label for="input-job experience" class="form-field">
+                    <span class="label-text">Досвід роботи (років)</span>
+                    <input type="number" name="job experience" id="input-job experience" class="form-input" placeholder="0-50" required min="0" max="50">
+                </label>
+
+                <label for="input-skills" class="form-field">
+                    <span class="label-text">Технології та навички</span>
+                    <input type="text" name="skills" id="input-skills" class="form-input" placeholder="React, TypeScript, Node.js, Python..." required>
+                </label>
+            </form>
+        </div>
+    </section>
+    <section class="section-additional">
+        <div class="container">
+            <h2 class="section-title">Додаткова інформація</h2>
+            <form class="form">
+                <label for="input-github profile" class="form-field">
+                    <span class="label-text">GitHub профіль</span>
+                    <input type="text" name="github profile" id="input-github profile" class="form-input" placeholder="https://github.com/username">
+                </label>
+                <label for="input-portfolio" class="form-field">
+                    <span class="label-text">Портфоліо</span>
+                    <input type="text" name="portfolio" id="input-portfolio" class="form-input" placeholder="https://yourportfolio.com">
+                </label>
+                <label for="input-CV" class="form-field">
+                    <span class="label-text">Резюме (PDF, DOC)</span>
+                    <input type="file" name="CV" id="input-CV" value="" class="form-file" required>
+                </label>
+                <label for="input-about me" class="form-field">
+                    <span class="label-text">Коротко про себе</span>
+                    <input type="text" name="about me" id="input-about me" class="form-input" placeholder="Розкажіть про свій досвід, мотивацію та чому ви хочете приєднатися до нашої команди... (мінімум 50 символів)" required>
+                </label>
+            </form>
+        </div>
+    </section>
+    <section class="section-policy">
+        <div class="container">
+            <form class="form-policy">
+                <label class="checkbox-container">
+                    <input type="checkbox" name="privacy policy" class="form-checkbox">
+                    <span class="checkbox-text">Я даю згоду на обробку персональних даних та підтверджую, що вся надана інформація є достовірною *</span>
+                </label>
+            </form>
+        </div>
+    </section>
+    <div class="container">
+    <button type="submit" class="submit-button">Надіслати заявку</button>
     </div>
-  </section>
-  <section>
-    <div>
-        <h2>Професійна інформація</h2>
-        <form class="form">
-            <label for="input-wished proposal"><br>Бажана позиція<br></label>
-            <select name="wished proposal" id="input-wished proposal" required>
-                <option value="" selected>Оберіть позицію</option>
-                <option value="frontend" >Frontend Developer</option>
-                <option value="backend">Backend Developer</option>
-                <option value="fullstack">Fullstack Developer</option>
-                <option value="devops">DevOps Engineer</option>
-                <option value="qa">QA Engineer</option>
-                <option value="ui-ux">UI/UX Designer</option>
-                <option value="mobile">Mobile Developer</option>
-                <option value="data">Data Scientist</option>
-            </select>
-            <label for="input-job experience"><br>Досвід роботи (років)<br></label>
-            <input type="number" name="job experience" id="input-job experience" placeholder="0-50" required min="0" max="50">
-            <label for="input-skills"><br>Технології та навички<br></label>
-            <input type="text" name="skills" id="input-skills" placeholder="React, TypeScript, Node.js, Python..." required>
-        </form>
-    </div>
-  </section>
-  <section>
-    <div>
-        <h2>Додаткова інформація</h2>
-        <form class="form">
-            <label for="input-github profile"><br>GitHub профіль<br></label>
-            <input type="text" name="github profile" id="input-github profile" placeholder="https://github.com/username">
-            <label for="input-portfolio"><br>Портфоліо<br></label>
-            <input type="text" name="portfolio" id="input-portfolio" placeholder="https://yourportfolio.com">
-            <label for="input-CV"><br>Резюме (PDF, DOC)<br></label>
-            <input type="file" name="CV" id="input-CV" value="" required>
-            <label for="input-about me"><br>Коротко про себе<br></label>
-            <input type="text" name="about me" id="input-about me" placeholder="Розкажіть про свій досвід, мотивацію та чому ви хочете приєднатися до нашої команди... (мінімум 50 символів)" required>
-        </form>
-    </div>
-  </section>
-  <section>
-      <div>
-          <form>
-             <label>
-                 <input type="checkbox" name="privacy policy">Я даю згоду на обробку персональних даних та підтверджую, що вся надана інформація є достовірною *
-             </label>
-          </form>
-      </div>
-  </section>
-    <button type="submit">Надіслати заявку</button>
 </main>
-<footer>
-    
+<footer class="footer">
+<div class="container">
+    <h3>💡 Підказки по заповненню:</h3>
+    <p>✓ Зелена рамка — поле заповнено правильно</p>
+    <p>✗ Червона рамка — поле заповнено неправильно</p>
+    <p>→ Синя лінія зліва — обов'язкове поле</p>
+    <p>↗ Наведіть курсор на поле для ефекту підсвічування</p>
+</div>
 </footer>
 </body>
 </html>
